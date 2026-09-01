@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root { font-family: 'DM Sans', 'Noto Sans Bengali', sans-serif; color: #14213d; background: #f7f8fc; font-synthesis: none; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+.hero-glow { position: absolute; inset: -240px auto auto -180px; width: 620px; height: 620px; border-radius: 999px; background: radial-gradient(circle, rgba(192,225,215,.54), rgba(247,248,252,0) 68%); pointer-events: none; }
+.glass-card { background: rgba(255,255,255,.87); backdrop-filter: blur(20px); }
+.brand-mark { display:flex; height:34px; width:34px; align-items:center; justify-content:center; border-radius:11px; background:#14213d; color:#d6eee7; box-shadow: 0 8px 18px rgba(20,33,61,.16); }
+.upload-zone { min-height: 255px; }
+.image-frame, .signature-frame { overflow:hidden; border:1px solid #dce7ef; background:#f5f8fb; }
+.image-frame { aspect-ratio: 1 / 1.22; border-radius: 15px; }
+.missing-media { display:flex; height:100%; flex-direction:column; align-items:center; justify-content:center; gap:6px; color:#91a0b2; font-size:10px; text-align:center; }
+.image-frame img { height:100%; width:100%; object-fit:cover; }
+.signature-frame { display:flex; aspect-ratio: 2.9 / 1; align-items:center; justify-content:center; border-radius:15px; background:repeating-conic-gradient(#f5f8fb 0% 25%, #edf2f6 0% 50%) 50% / 12px 12px; }
+.signature-frame img { max-height:100%; max-width:100%; object-fit:contain; }
+.field-grid { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap:10px; }
+.field-card { min-width:0; border:1px solid #e6edf3; border-radius:13px; background:#fff; padding:11px 13px; }
+.field-card p { margin:0 0 4px; color:#8290a4; font-size:10px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
+.field-card strong { display:block; overflow-wrap:anywhere; color:#233a5d; font-size:13px; font-weight:600; line-height:1.45; }
+@media (max-width: 640px) { .field-grid { grid-template-columns:1fr; } .hero-glow { left:-330px; } }
